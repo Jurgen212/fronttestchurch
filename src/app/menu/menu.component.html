@@ -1,0 +1,8 @@
+<div class="menu-container">
+  <h1 class="menu-title">Menú Principal</h1>
+
+  <button class="menu-btn" (click)="crearVenta()" *ngIf="productos == null || productos.length == 0">Crear Venta</button>
+  <button class="menu-btn" (click)="crearVenta()" *ngIf="productos && productos.length > 0">Continuar Venta</button>
+  <button class="menu-btn" (click)="verVentasHoy()">Ver Ventas Hoy</button>
+  <button class="menu-btn danger" (click)="borrarLocalStorage()">Borrar Local Storage</button>
+</div>

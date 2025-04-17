@@ -1,0 +1,20 @@
+<div class="ver-ventas-container">
+  <h2 class="titulo">Ventas de Hoy</h2>
+
+  <ul class="lista-ventas">
+    <li *ngFor="let venta of ventas" class="venta-card">
+      <span class="hora-venta">🕒 Hora cierre: {{ venta.fechaVenta | date:'shortTime' }}</span>
+      <p class="productos-titulo">🛍 Productos:</p>
+      <ul class="lista-productos">
+        <li *ngFor="let producto of venta.productos" class="producto-item">
+          <span class="producto-info">
+            {{ producto.nombre }} - 
+            precio {{ producto.precio |  currency:'COP' }} - 
+            cantidad {{ producto.cantidadVendida }}
+          </span>
+          <p class="producto-total">Total: {{ producto.precio * producto.cantidadVendida |  currency:'COP'}}</p>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>

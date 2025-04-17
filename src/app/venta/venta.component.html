@@ -1,0 +1,15 @@
+<div class="venta-container">
+  <h2 class="venta-title">Crear Venta</h2>
+
+  <div class="producto" *ngFor="let producto of productos">
+    <h3 class="producto-nombre">{{ producto.nombre }} - ${{ producto.precio }}</h3>
+    <div class="cantidad-controles">
+      <button class="cantidad-btn" (click)="cambiarCantidad(producto, 1)">+</button>
+      <span class="cantidad-texto">{{ producto.cantidadVendida }}</span>
+      <button class="cantidad-btn" (click)="cambiarCantidad(producto, -1)">-</button>
+    </div>
+  </div>
+
+  <button class="venta-btn" (click)="registrarVenta()">Registrar Venta</button>
+  <button class="venta-btn volver" (click)="volverAlMenu()">Volver al Menú</button>
+</div>
