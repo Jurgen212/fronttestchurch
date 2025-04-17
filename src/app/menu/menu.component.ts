@@ -26,6 +26,5 @@ export class MenuComponent {
 
   borrarLocalStorage() {
     localStorage.clear();
-    location.reload()
   }
 }
