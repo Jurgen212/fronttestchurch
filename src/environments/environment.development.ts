@@ -1,3 +1,3 @@
 export const environment = {
-    API_URI:"http://localhost:5000/api/"
+    API_URI:"https://backtestschurch.onrender.com/api/"
 };
